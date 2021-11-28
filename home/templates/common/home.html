@@ -29,9 +29,11 @@
 				</section>
 				<section class="col-md-4 chat">
 					<ul id="chat-log">
+						{% if cht %}
 						{% for cht in chat %}
 							<li><span>{{cht.user}}</span> {{cht.message}}</li>
 						{% endfor %}
+						{% endif %}
 					</ul>
 					<!-- <textarea cols="55" rows="20"></textarea><br/> -->
 					<input id="chat-message-input" type="text" size="56"/>
